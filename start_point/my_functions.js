@@ -51,8 +51,19 @@ myFunctions = {
   sphereVol(rad) {
     let answer = (4/3) * Math.PI * myFunctions.cube(rad);
     return parseFloat(answer.toFixed(2));
+  },
+
+  fToC(degFar) {
+    return round2((degFar - 32) * (5/9));
+    // minus 32, times 5/9:
   }
 
 };
+
+// Create a function that rounds to 2 and use it for both
+
+function round2(floatString) {
+  return parseFloat(floatString.toFixed(2));
+}
 
 module.exports = myFunctions;
